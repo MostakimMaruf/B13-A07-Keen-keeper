@@ -1,8 +1,8 @@
-import React from 'react';
-import { useLoaderData, useParams, Link } from 'react-router-dom';
-import { FaPhoneAlt, FaVideo, FaRegClock, FaTrashAlt } from 'react-icons/fa';
-import { MdOutlineMessage, MdOutlineArchive } from 'react-icons/md';
-import { IoIosArrowBack } from 'react-icons/io';
+import React from "react";
+import { useLoaderData, useParams, Link } from "react-router-dom";
+import { FaPhoneAlt, FaVideo, FaRegClock, FaTrashAlt } from "react-icons/fa";
+import { MdOutlineMessage, MdOutlineArchive } from "react-icons/md";
+import { IoIosArrowBack } from "react-icons/io";
 
 const Frienddetails = () => {
   const { Id } = useParams();
@@ -15,7 +15,6 @@ const Frienddetails = () => {
   return (
     <div className="min-h-screen bg-[#f8fafc] p-4 sm:p-6 md:p-10 text-slate-700">
       <div className="max-w-5xl mx-auto">
-
         {/* Back Button */}
         <Link
           to="/"
@@ -25,10 +24,8 @@ const Frienddetails = () => {
         </Link>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
-
           {/* LEFT SIDE */}
           <div className="lg:col-span-4 space-y-4">
-
             <div className="bg-white p-5 sm:p-6 md:p-8 rounded-2xl shadow-sm border text-center">
               <img
                 src={friend.picture}
@@ -45,7 +42,7 @@ const Frienddetails = () => {
                   {friend.status}
                 </span>
                 <span className="bg-green-100 text-green-700 text-[10px] px-3 py-1 rounded-full uppercase font-bold">
-                  {friend.tags?.[0] || 'WORK'}
+                  {friend.tags?.[0] || "WORK"}
                 </span>
               </div>
 
@@ -70,7 +67,6 @@ const Frienddetails = () => {
 
           {/* RIGHT SIDE */}
           <div className="lg:col-span-8 space-y-5">
-
             {/* Stats */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
               <div className="bg-white p-4 sm:p-6 rounded-2xl text-center">
@@ -90,9 +86,7 @@ const Frienddetails = () => {
               </div>
 
               <div className="bg-white p-4 sm:p-6 rounded-2xl text-center">
-                <h2 className="text-sm sm:text-lg font-bold">
-                  Feb 27, 2026
-                </h2>
+                <h2 className="text-sm sm:text-lg font-bold">Feb 27, 2026</h2>
                 <p className="text-[10px] uppercase mt-2 text-slate-400">
                   Next Due
                 </p>
@@ -118,21 +112,26 @@ const Frienddetails = () => {
               <div className="grid grid-cols-3 gap-3 sm:gap-6">
                 <button className="p-4 sm:p-8 bg-slate-50 rounded-xl flex flex-col items-center">
                   <FaPhoneAlt />
-                  <span className="text-xs sm:text-sm mt-2 font-bold">Call</span>
+                  <span className="text-xs sm:text-sm mt-2 font-bold">
+                    Call
+                  </span>
                 </button>
 
                 <button className="p-4 sm:p-8 bg-slate-50 rounded-xl flex flex-col items-center">
                   <MdOutlineMessage />
-                  <span className="text-xs sm:text-sm mt-2 font-bold">Text</span>
+                  <span className="text-xs sm:text-sm mt-2 font-bold">
+                    Text
+                  </span>
                 </button>
 
                 <button className="p-4 sm:p-8 bg-slate-50 rounded-xl flex flex-col items-center">
                   <FaVideo />
-                  <span className="text-xs sm:text-sm mt-2 font-bold">Video</span>
+                  <span className="text-xs sm:text-sm mt-2 font-bold">
+                    Video
+                  </span>
                 </button>
               </div>
             </div>
-
           </div>
         </div>
       </div>
