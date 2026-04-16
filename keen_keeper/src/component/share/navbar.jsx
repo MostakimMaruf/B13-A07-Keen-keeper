@@ -17,10 +17,10 @@ export default function Navbar() {
       {/* Logo */}
       <div className="flex items-center gap-2 cursor-pointer">
         <div className="text-base tracking-tight">
-          <span className="font-bold text-[#1a2b2b] text-xl md:text-2xl">
+          <span className="font-extrabold text-[#1a2b2b] text-xl md:text-3xl">
             Keen
           </span>
-          <span className="font-normal text-[#244D3F] text-xl md:text-2xl">
+          <span className="font-bold text-[#244D3F] text-xl md:text-3xl">
             Keeper
           </span>
         </div>

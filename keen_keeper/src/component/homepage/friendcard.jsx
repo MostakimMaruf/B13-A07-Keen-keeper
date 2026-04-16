@@ -29,7 +29,7 @@ const FriendsCards = () => {
       case "almost due":
         return base + "bg-orange-400 text-white";
       case "on-track":
-        return base + "bg-[#1e3a34] text-white"; // Dark green from image
+        return base + "bg-[#1e3a34] text-white"; 
       default:
         return base + "bg-gray-200 text-gray-600";
     }
@@ -39,8 +39,8 @@ const FriendsCards = () => {
     return <div className="p-10 text-center">Loading friends...</div>;
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] p-8 font-sans">
-      <div className="max-w-5xl mx-auto">
+    <div className="min-h-screen bg-[#f8fafc] pt-0 px-8 pb-8 font-sans">
+      <div className="max-w-5xl mx-auto ">
         <h1 className="text-2xl font-bold text-[#1e293b] mb-8">Your Friends</h1>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -75,7 +75,6 @@ const FriendsCards = () => {
                   </span>
                 ))}
               </div>
-
 
               <div className={getStatusClasses(friend.status)}>
                 {friend.status}
