@@ -1,16 +1,72 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+# 👥 KeenKeeper — Keep Your Friendships Alive
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+KeenKeeper is a responsive web application designed to help users track and maintain their friendships. It allows users to monitor interaction history, manage contact goals, and visualize relationship engagement through an interactive dashboard.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Live Demo
+- 🔗 Live Site: [(https://keen-keeper-red-six.vercel.app/)]
+- 🔗 GitHub Repo: [https://github.com/MostakimMaruf/B13-A07-Keen-keeper]
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📌 Project Overview
+
+KeenKeeper helps users stay connected with friends by tracking communication history such as calls, texts, and video interactions. It provides analytics, timelines, and reminders to ensure no important relationship goes unnoticed.
+
+---
+
+## 🛠️ Technologies Used
+
+- ⚛️ React.js
+- ⚡ React Router DOM
+- 🎨 Tailwind CSS
+- 📊 Recharts
+- 🔔 React Toastify (or any toast library)
+- 🗂️ JSON Data Handling
+
+---
+
+## ✨ Key Features
+
+### 1. 👥 Friend Management
+- Display friends using dynamic JSON data
+- Individual friend profile cards with status indicators
+- Detailed friend profile page with structured layout
+
+### 2. ⚡ Interaction Tracking
+- Log Call, Text, and Video interactions
+- Automatically update Timeline on each interaction
+- Toast notifications for user actions
+
+### 3. 📊 Analytics Dashboard
+- Pie chart visualization of interactions
+- Filter timeline by interaction type
+- Quick insights into communication patterns
+
+---
+
+## 📱 Responsive Design
+
+- Fully responsive for **mobile, tablet, and desktop**
+- Clean and modern UI inspired by Figma design
+
+---
+
+## 📜 Pages Included
+
+- 🏠 Home Page (Friends + Banner + Summary Cards)
+- 👤 Friend Details Page
+- 📊 Stats / Analytics Page
+- 📜 Timeline Page
+- ❌ 404 Not Found Page
+
+---
+
+## 👨‍💻 Author
+
+**Mostakim Hasan Maruf**  
+📌 Developed by: **Mostakim Hasan Maruf**
+🎯 Purpose: Academic Project Submission
