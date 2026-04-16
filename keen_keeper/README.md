@@ -8,7 +8,7 @@ KeenKeeper is a responsive web application designed to help users track and main
 
 ## 🚀 Live Demo
 - 🔗 Live Site: [(https://keen-keeper-red-six.vercel.app/)]
-- 🔗 GitHub Repo: [https://github.com/MostakimMaruf/B13-A07-Keen-keeper]
+- 🔗 GitHub Repo: [https://github.com/MostakimMaruf/B13-A07-Keen-keeper/tree/main/keen_keeper]
 
 ---
 
