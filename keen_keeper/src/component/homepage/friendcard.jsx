@@ -6,7 +6,7 @@ const FriendsCards = () => {
   console.log(friends);
   const [loading, setLoading] = useState(true);
 
-  // 1. Fetch data from public/data.json
+  // fetch data
   useEffect(() => {
     fetch("/friends.json")
       .then((response) => response.json())
@@ -20,7 +20,6 @@ const FriendsCards = () => {
       });
   }, []);
 
-  // 2. Helper to handle dynamic status colors
   const getStatusClasses = (status) => {
     const base =
       "text-[10px] font-bold px-4 py-1 rounded-full uppercase tracking-wider ";
@@ -44,14 +43,12 @@ const FriendsCards = () => {
       <div className="max-w-5xl mx-auto">
         <h1 className="text-2xl font-bold text-[#1e293b] mb-8">Your Friends</h1>
 
-        {/* Grid Container */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {friends.map((friend, index) => (
             <div
               key={index}
               className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 flex flex-col items-center transition-transform hover:scale-[1.02]"
             >
-              {/* Profile Image */}
               <div className="w-20 h-20 mb-4">
                 <img
                   src={friend.picture || "https://via.placeholder.com/150"}
@@ -60,7 +57,6 @@ const FriendsCards = () => {
                 />
               </div>
 
-              {/* Name & Timestamp */}
               <h3 className="text-lg font-bold text-gray-800 mb-0.5">
                 {" "}
                 <Link to={`/frienddetails/${friend?.id}`}>{friend.name}</Link>
@@ -69,7 +65,6 @@ const FriendsCards = () => {
                 {friend.lastContact || "62d ago"}
               </p>
 
-              {/* Tag Badges (Work, Family, etc.) */}
               <div className="flex flex-wrap justify-center gap-2 mb-5">
                 {friend.tags?.map((tag, i) => (
                   <span
@@ -81,7 +76,7 @@ const FriendsCards = () => {
                 ))}
               </div>
 
-              {/* Status Badge (Overdue, On-Track, etc.) */}
+
               <div className={getStatusClasses(friend.status)}>
                 {friend.status}
               </div>

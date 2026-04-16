@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="bg-[#244D3F] text-white py-12 px-4">
       <div className="max-w-5xl mx-auto text-center">
         
-        {/* Logo / Title */}
+        {/* logo */}
         <h2 className="text-4xl md:text-5xl font-semibold mb-4">
           KeenKeeper
         </h2>
@@ -45,7 +45,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Divider */}
+
         <div className="border-t border-white/20 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-200">
           
           <p>© 2026 KeenKeeper. All rights reserved.</p>

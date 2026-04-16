@@ -13,7 +13,8 @@ const Frienddetails = () => {
 
   if (!friend) return <div className="p-6 text-center">Friend not found!</div>;
 
-  // ✅ FUNCTION ADDED (NO UI CHANGE)
+  // add timeline logic
+  
   const addToTimeline = (type) => {
     const newItem = {
       type,
@@ -36,7 +37,6 @@ const Frienddetails = () => {
   return (
     <div className="min-h-screen bg-[#f8fafc] p-4 sm:p-6 md:p-10 text-slate-700">
       <div className="max-w-5xl mx-auto">
-        {/* Back Button */}
         <Link
           to="/"
           className="flex items-center gap-1 text-sm text-slate-500 hover:text-slate-800 mb-4 sm:mb-6"
@@ -45,7 +45,6 @@ const Frienddetails = () => {
         </Link>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
-          {/* LEFT SIDE */}
           <div className="lg:col-span-4 space-y-4">
             <div className="bg-white p-5 sm:p-6 md:p-8 rounded-2xl shadow-sm border text-center">
               <img
@@ -72,7 +71,6 @@ const Frienddetails = () => {
               </p>
             </div>
 
-            {/* Buttons */}
             <div className="space-y-2">
               <button className="w-full flex items-center justify-center gap-2 bg-white p-3 rounded-xl border text-sm">
                 <FaRegClock /> Snooze 2 Weeks
@@ -86,9 +84,7 @@ const Frienddetails = () => {
             </div>
           </div>
 
-          {/* RIGHT SIDE */}
           <div className="lg:col-span-8 space-y-5">
-            {/* Stats */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
               <div className="bg-white p-4 sm:p-6 rounded-2xl text-center">
                 <h2 className="text-2xl sm:text-3xl font-bold">62</h2>

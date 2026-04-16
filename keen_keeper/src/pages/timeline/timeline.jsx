@@ -25,12 +25,12 @@ export default function Timeline() {
     return () => window.removeEventListener("focus", handleFocus);
   }, []);
 
-  // ✅ Filtering logic
+  // filtering
   const filteredItems = timelineData.filter((item) =>
     filter === "All" ? true : item.type === filter,
   );
 
-  // ✅ Icon mapping (UI same)
+  // icons
   const getIcon = (type) => {
     switch (type) {
       case "Call":
@@ -44,7 +44,7 @@ export default function Timeline() {
     }
   };
 
-  // ✅ Color mapping (UI same)
+  // colors
   const getColor = (type) => {
     switch (type) {
       case "Call":
@@ -64,7 +64,6 @@ export default function Timeline() {
     <div className="max-w-2xl mx-auto p-8 bg-[#f8fafb] min-h-screen font-sans">
       <h1 className="text-3xl font-bold text-[#1a2b2b] mb-8">Timeline</h1>
 
-      {/* Filter Dropdown */}
       <div className="relative inline-block mb-8">
         <select
           value={filter}
@@ -82,7 +81,6 @@ export default function Timeline() {
         </div>
       </div>
 
-      {/* Timeline List */}
       <div className="flex flex-col gap-3">
         {filteredItems.map((item, index) => {
           const Icon = getIcon(item.type);

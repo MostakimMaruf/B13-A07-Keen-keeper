@@ -26,7 +26,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Desktop Menu */}
+      {/*dextop menu */}
       <div className="hidden md:flex items-center gap-1">
         {navItems.map(({ label, path, icon: Icon }) => (
           <NavLink
@@ -47,14 +47,16 @@ export default function Navbar() {
         ))}
       </div>
 
-      {/* Mobile Menu Button */}
+      {/* Mobile Menu */}
+
       <div className="md:hidden">
-        <button onClick={() => setOpen(!open)}>
+        <button onClick={() => setOpen(!open)} className="text-[#1e4034]">
           {open ? <FiX size={22} /> : <FiMenu size={22} />}
         </button>
       </div>
 
-      {/* Mobile Dropdown */}
+      {/* Mobile dropdown */}
+
       {open && (
         <div className="absolute top-14 left-0 w-full bg-white border-t border-[#e2e8e8] flex flex-col md:hidden z-50">
           {navItems.map(({ label, path, icon: Icon }) => (
