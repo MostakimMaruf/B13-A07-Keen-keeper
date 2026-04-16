@@ -1,10 +1,5 @@
 import { useState, useEffect } from "react";
-import {
-  FiMessageSquare,
-  FiVideo,
-  FiPhone,
-  FiChevronDown,
-} from "react-icons/fi";
+import { FiChevronDown } from "react-icons/fi";
 import { FaUsers } from "react-icons/fa";
 
 export default function Timeline() {
@@ -30,20 +25,21 @@ export default function Timeline() {
     filter === "All" ? true : item.type === filter,
   );
 
+  const call = "/icon/call.png";
+  const video = "/icon/video.png";
+  const text = "/icon/text.png";
+
   // icons
   const getIcon = (type) => {
     switch (type) {
       case "Call":
-        return FiPhone;
+        return call;
       case "Text":
-        return FiMessageSquare;
+        return text;
       case "Video":
-        return FiVideo;
-      default:
-        return FiMessageSquare;
+        return video;
     }
   };
-
   // colors
   const getColor = (type) => {
     switch (type) {
@@ -94,7 +90,11 @@ export default function Timeline() {
               <div
                 className={`flex items-center justify-center w-10 h-10 rounded-lg ${colorClass}`}
               >
-                <Icon size={18} />
+                <img
+                  src={getIcon(item.type)}
+                  alt={item.type}
+                  className="w-5 h-5"
+                />
               </div>
 
               <div className="flex flex-col">
