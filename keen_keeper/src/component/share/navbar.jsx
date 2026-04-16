@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FiHome, FiClock, FiActivity, FiMenu, FiX } from "react-icons/fi";
@@ -13,7 +14,6 @@ export default function Navbar() {
 
   return (
     <nav className="bg-white border-b border-[#e2e8e8] px-4 md:px-6 h-14 flex items-center justify-between w-full relative">
-
       {/* Logo */}
       <div className="flex items-center gap-2 cursor-pointer">
         <div className="text-base tracking-tight">
@@ -34,9 +34,10 @@ export default function Navbar() {
             to={path}
             className={({ isActive }) => `
               flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-medium transition-all
-              ${isActive 
-                ? "bg-[#1e4034] text-white" 
-                : "text-[#4a5a5a] hover:bg-[#f0f2f0]"
+              ${
+                isActive
+                  ? "bg-[#1e4034] text-white"
+                  : "text-[#4a5a5a] hover:bg-[#f0f2f0]"
               }
             `}
           >
@@ -63,9 +64,10 @@ export default function Navbar() {
               onClick={() => setOpen(false)}
               className={({ isActive }) => `
                 flex items-center gap-2 px-4 py-3 text-sm font-medium
-                ${isActive 
-                  ? "bg-[#1e4034] text-white" 
-                  : "text-[#4a5a5a] hover:bg-[#f0f2f0]"
+                ${
+                  isActive
+                    ? "bg-[#1e4034] text-white"
+                    : "text-[#4a5a5a] hover:bg-[#f0f2f0]"
                 }
               `}
             >

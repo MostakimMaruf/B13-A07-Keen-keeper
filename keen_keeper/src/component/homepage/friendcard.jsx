@@ -8,7 +8,7 @@ const FriendsCards = () => {
 
   // 1. Fetch data from public/data.json
   useEffect(() => {
-    fetch("../../../public/friends.json")
+    fetch("/friends.json")
       .then((response) => response.json())
       .then((data) => {
         setFriends(data);
@@ -41,7 +41,7 @@ const FriendsCards = () => {
 
   return (
     <div className="min-h-screen bg-[#f8fafc] p-8 font-sans">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <h1 className="text-2xl font-bold text-[#1e293b] mb-8">Your Friends</h1>
 
         {/* Grid Container */}

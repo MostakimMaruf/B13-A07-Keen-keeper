@@ -8,7 +8,7 @@ export default function StatsRow() {
   // fetch data
 
   useEffect(() => {
-    fetch("../../../public/friends.json")
+    fetch("/friends.json")
       .then((response) => response.json())
       .then((data) => {
         setFriends(data);

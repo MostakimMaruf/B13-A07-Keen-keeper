@@ -3,6 +3,7 @@ import { useLoaderData, useParams, Link } from "react-router-dom";
 import { FaPhoneAlt, FaVideo, FaRegClock, FaTrashAlt } from "react-icons/fa";
 import { MdOutlineMessage, MdOutlineArchive } from "react-icons/md";
 import { IoIosArrowBack } from "react-icons/io";
+import { toast } from "react-toastify";
 
 const Frienddetails = () => {
   const { Id } = useParams();
@@ -11,6 +12,26 @@ const Frienddetails = () => {
   const friend = allFriends.find((f) => String(f.id) === Id);
 
   if (!friend) return <div className="p-6 text-center">Friend not found!</div>;
+
+  // ✅ FUNCTION ADDED (NO UI CHANGE)
+  const addToTimeline = (type) => {
+    const newItem = {
+      type,
+      contact: friend.name,
+      date: new Date().toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      }),
+    };
+
+    const existing = JSON.parse(localStorage.getItem("timeline")) || [];
+    const updated = [newItem, ...existing];
+
+    localStorage.setItem("timeline", JSON.stringify(updated));
+
+    toast.success(`${type} with ${friend.name} added`);
+  };
 
   return (
     <div className="min-h-screen bg-[#f8fafc] p-4 sm:p-6 md:p-10 text-slate-700">
@@ -110,21 +131,30 @@ const Frienddetails = () => {
               </h3>
 
               <div className="grid grid-cols-3 gap-3 sm:gap-6">
-                <button className="p-4 sm:p-8 bg-slate-50 rounded-xl flex flex-col items-center">
+                <button
+                  onClick={() => addToTimeline("Call")} // ✅ added
+                  className="p-4 sm:p-8 bg-slate-50 rounded-xl flex flex-col items-center"
+                >
                   <FaPhoneAlt />
                   <span className="text-xs sm:text-sm mt-2 font-bold">
                     Call
                   </span>
                 </button>
 
-                <button className="p-4 sm:p-8 bg-slate-50 rounded-xl flex flex-col items-center">
+                <button
+                  onClick={() => addToTimeline("Text")} // ✅ added
+                  className="p-4 sm:p-8 bg-slate-50 rounded-xl flex flex-col items-center"
+                >
                   <MdOutlineMessage />
                   <span className="text-xs sm:text-sm mt-2 font-bold">
                     Text
                   </span>
                 </button>
 
-                <button className="p-4 sm:p-8 bg-slate-50 rounded-xl flex flex-col items-center">
+                <button
+                  onClick={() => addToTimeline("Video")} // ✅ added
+                  className="p-4 sm:p-8 bg-slate-50 rounded-xl flex flex-col items-center"
+                >
                   <FaVideo />
                   <span className="text-xs sm:text-sm mt-2 font-bold">
                     Video
